@@ -1,0 +1,7 @@
+
+data/data_format1/train_format1.csv
+data/data_format1/test_format1.csv
+data/data_format1/user_info_format1.csv
+data/data_format1/user_log_format1.csv
+data/data_format2/test_format2.csv
+data/data_format2/train_format2.csv
