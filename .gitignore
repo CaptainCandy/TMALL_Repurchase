@@ -5,3 +5,11 @@ data/data_format1/user_info_format1.csv
 data/data_format1/user_log_format1.csv
 data/data_format2/test_format2.csv
 data/data_format2/train_format2.csv
+feature/userSellerInfo_Features_3.pkl
+feature/userInfo_Features_3.pkl
+feature/user_seller_info_format_feature_3.csv
+feature/user_info_format_feature_3.csv
+feature/train_data_merged.csv
+feature/test_data_merged.csv
+feature/sellerInfo_Features_3.pkl
+feature/seller_info_format_feature_3.csv
