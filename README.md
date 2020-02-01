@@ -20,7 +20,7 @@
   - [3.2 Feature extraction](#32-feature-extraction)
     - [3.2.1 User related features](#321-user-related-features)
     - [3.2.2 Seller related features](#322-seller-related-features)
-    - [3.2.3 User-seller features:](#323-user-seller-features)
+    - [3.2.3 User-seller features](#323-user-seller-features)
 - [4 Modeling](#4-modeling)
   - [4.1 Separate Models](#41-separate-models)
     - [4.1.1 Logistic Regression](#411-logistic-regression)
@@ -186,7 +186,7 @@ The following are features that correspond to clicking, adding to shop cart, pur
 | userSaveRatio | interval | the ratio of the number of user collections to the total number of collections for all users | 用户收藏次数占所有用户的总收藏次数的比例 |
 | userSaveDiff | interval | the difference between the number of user collections and the average number of collections for all users | 用户收藏次数与所有用户的平均收藏次数的差值 |
 
-**User habit features:**
+**User habit features**
 
 In this section we will focus on one specific user&#39;s habits rather than compare individuals&#39; behaviors to the total&#39;s. We will calculate the ratio of certain behavior times to this user&#39;s entire behavior times, e.g. the ratio of the number of user clicks to the total number of interactions by this user. Besides, we will summarize the conversion of one certain step to another. And we also calculated how broad one user would get in touch with certain items or merchants. Whether the user have already repurchased in certain shops before Double 11 Day might also affect the user&#39;s behavior later. We count the number of users&#39; monthly purchases, favors, clicks, adding to cart and total interactions to get their active cycles. Finally, we standardize all the interval features.
 
@@ -244,7 +244,7 @@ We firstly calculate the sum total of the items, categories and brands to find o
 | save\_people\_ratio | interval | the ratio of the number of users with collection behavior of this merchant to all users with collection behavior | 此商户有收藏行为的用户数占所有有收藏行为用户数的比例 |
 | repeatPeoCount | interval | the number of repeater buyers of this merchant before double 11 | 商户的双十一之前的重复买家数量 |
 
-### 3.2.3 User-seller features:
+### 3.2.3 User-seller features
 
 Finally we collected user-seller features, which correspond to the prediction, including times one user will interact with a predicted seller, conversion from one step to the next of a predicted seller, time periods of each conversion, amounts of interaction with each item with a predicted seller, amounts of interaction with each category with a predicted seller, and amounts of interaction with each item with a predicted seller.
 
