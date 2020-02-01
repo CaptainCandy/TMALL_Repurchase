@@ -2,6 +2,8 @@
 
 ### **Done by Xinze Tang, Yu Han, Shiqi Tao**
 
+[TOC]
+
 # 1 Business understanding
 ## 1.1 Business background
 
