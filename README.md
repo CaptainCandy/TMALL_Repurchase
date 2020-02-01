@@ -316,7 +316,11 @@ A multilayer perceptron is a subset of artificial neural network. We establish a
 
 Specifically, we use 700 nodes in the hidden layer, use the ReLU activation function. We set the learning rate to 0.001 and the maximum iteration to 200. Here, we set the number of nodes to 700 according to the empirical formula:
 
-where  = number input nodes,  = number of output nodes,  = number of samples in trainset,  = an arbitrary scaling factor usually 2-10.
+$$
+N_{h}=\frac{N_{s}}{\alpha \times (N_{i}+N_{o})}
+$$
+
+where $N_i=$ number input nodes, $N_o=$ number of output nodes, $N_s=$ number of samples in trainset, $\alpha =$ an arbitrary scaling factor usually 2-10.
 
 Multi-layer perceptron has many algorithms to do the optimization. Here we try Adam solver and Stochastic Gradient Descent solver. The following table offers the results.
 
