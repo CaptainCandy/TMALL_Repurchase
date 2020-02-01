@@ -4,8 +4,6 @@
 
 <!-- TOC -->
 
-- [**TMALL Repeat Buyers Prediction**](#tmall-repeat-buyers-prediction)
-    - [**Done by Xinze Tang, Yu Han, Shiqi Tao**](#done-by-xinze-tang-yu-han-shiqi-tao)
 - [1 Business understanding](#1-business-understanding)
   - [1.1 Business background](#11-business-background)
   - [1.2 Task](#12-task)
