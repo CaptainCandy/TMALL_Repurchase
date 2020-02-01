@@ -325,11 +325,11 @@ We set the number of subset splits as 10. Here we can only do cross validation o
 
 We conduct cross validation on three important parameters: number of estimators, maximum depth for each tree, learning rate. For explanation, we plot out the AUC score with variances. As the flowing figurers shows, the optimal parameter values are 67 estimators, learning rate: 0.1, maximum depth for each tree: 8.
 
-![image](https://github.com/CaptainCandy/TMALL_Repurchase/tree/master/images/xgboost_nest.png)
+![image](https://github.com/CaptainCandy/TMALL_Repurchase/blob/master/images/xgboost_nest.png)
 
-![image](https://github.com/CaptainCandy/TMALL_Repurchase/tree/master/images/xgboost_maxdepth.png)
+![image](https://github.com/CaptainCandy/TMALL_Repurchase/blob/master/images/xgboost_maxdepth.png)
 
-![image](https://github.com/CaptainCandy/TMALL_Repurchase/tree/master/images/xgboost_lr.png)
+![image](https://github.com/CaptainCandy/TMALL_Repurchase/blob/master/images/xgboost_lr.png)
 
 Specify the optimal parameters, we get the score better than the last best one. This score help our group to rank the 86th of the leaderborder of this competition.
 
@@ -341,7 +341,7 @@ Specify the optimal parameters, we get the score better than the last best one. 
 
 We also conduct a cross validation on logistic regression to determine the maximum iterations as 138. As we can see in the following figure, we find that the lines for trainset and test are almost the same. It is because that logistic regression is such a simple model that there is little room for complexity and overfitting on trainset.
 
-![image](https://github.com/CaptainCandy/TMALL_Repurchase/tree/master/images/lr_lr.png)
+![image](https://github.com/CaptainCandy/TMALL_Repurchase/blob/master/images/lr_lr.png)
 
 ### 4.2.3 Random Forest
 
@@ -395,9 +395,9 @@ The following figure shows the top 20 positive and negative features.
 
 We do some detailed analysis on the positive ones: The most important variable is the user&#39;s adding to cart-to-buy conversion rate for the predicted seller (用户对预测商户的加购购买转化率）. This variable reflects the users&#39; purchasing power and the preference for predicted merchant. The second important variable is the number of days the user acts in six months (用户六个月内做出交互行为的天数). This variable reflects whether the user interacts in a long term. The third important variable is the ratio of the number of users with adding to cart behavior of this merchant to all users with adding to cart behavior (此商户有加购行为的用户数占所有有加购行为用户数的比例).  This variable reflects the popularity of the merchant in the current market. If the merchant is popular, users are more likely to purchase repeatedly.
 
-![image](https://github.com/CaptainCandy/TMALL_Repurchase/tree/master/images/coef_lr_top20.png)
+![image](https://github.com/CaptainCandy/TMALL_Repurchase/blob/master/images/coef_lr_top20.png)
 
-![image](https://github.com/CaptainCandy/TMALL_Repurchase/tree/master/images/coef_lr_last20.png)
+![image](https://github.com/CaptainCandy/TMALL_Repurchase/blob/master/images/coef_lr_last20.png)
 
 ### 5.2.2 XGBoost
 
@@ -405,7 +405,7 @@ The &#39;weight&#39; importance of XGBoost is the number of times a feature appe
 
 The most frequently used variable is the number of repeater buyers of this merchant (这个商户的重复买家数量). This is not difficult to understand, if a merchant in the past was easy to attract customers to repurchase, then new users are also more likely to repeatedly purchase. The second frequently used variable is the adding to cart-to-buy conversion rate of the merchant. This variable reflects the degree of the merchant&#39;s attraction.  The third one is  the ratio of the number of user clicks to the total number of interactions of this user (用户点击次数占这个用户总交互次数的比例). This variable reflects the user&#39;s purchasing power. If a user has a higher proportion of clicks and a lower proportion of other behaviors, the user may be less likely to make a second purchase.
 
-![image](https://github.com/CaptainCandy/TMALL_Repurchase/tree/master/images/XGBoost_weight.png)
+![image](https://github.com/CaptainCandy/TMALL_Repurchase/blob/master/images/XGBoost_weight.png)
 
 ## 5.3 Future Improvement
 
