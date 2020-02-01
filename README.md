@@ -2,7 +2,47 @@
 
 ### **Done by Xinze Tang, Yu Han, Shiqi Tao**
 
-[TOC]
+<!-- TOC -->
+
+- [**TMALL Repeat Buyers Prediction**](#tmall-repeat-buyers-prediction)
+    - [**Done by Xinze Tang, Yu Han, Shiqi Tao**](#done-by-xinze-tang-yu-han-shiqi-tao)
+- [1 Business understanding](#1-business-understanding)
+  - [1.1 Business background](#11-business-background)
+  - [1.2 Task](#12-task)
+- [2 Data understanding](#2-data-understanding)
+  - [2.1 User profile](#21-user-profile)
+  - [2.2 User behavior logs](#22-user-behavior-logs)
+  - [2.3 Training and Testing Data](#23-training-and-testing-data)
+  - [2.4 The Statistics about Missing value](#24-the-statistics-about-missing-value)
+  - [2.5 The Statistics about the basic information](#25-the-statistics-about-the-basic-information)
+- [3 Data preparation](#3-data-preparation)
+  - [3.1 Fill missing values](#31-fill-missing-values)
+  - [3.2 Feature extraction](#32-feature-extraction)
+    - [3.2.1 User related features](#321-user-related-features)
+    - [3.2.2 Seller related features](#322-seller-related-features)
+    - [3.2.3 User-seller features:](#323-user-seller-features)
+- [4 Modeling](#4-modeling)
+  - [4.1 Separate Models](#41-separate-models)
+    - [4.1.1 Logistic Regression](#411-logistic-regression)
+    - [4.1.2 Support Vector Machine](#412-support-vector-machine)
+    - [4.1.3 Multi-layer Perceptron](#413-multi-layer-perceptron)
+    - [4.1.4 Random Forest](#414-random-forest)
+    - [4.1.5 AdaBoost](#415-adaboost)
+    - [4.1.6 XGBoost](#416-xgboost)
+  - [4.2 Cross Validation](#42-cross-validation)
+    - [4.2.1 XGBoost](#421-xgboost)
+    - [4.2.2 Logistic Regression](#422-logistic-regression)
+    - [4.2.3 Random Forest](#423-random-forest)
+  - [4.3 Stack Learning](#43-stack-learning)
+- [5 Evaluation](#5-evaluation)
+  - [5.1 Overall Comparison](#51-overall-comparison)
+  - [5.2 Feature Importance](#52-feature-importance)
+    - [5.2.1 Logistic Regression](#521-logistic-regression)
+    - [5.2.2 XGBoost](#522-xgboost)
+  - [5.3 Future Improvement](#53-future-improvement)
+- [6 Deployment](#6-deployment)
+
+<!-- /TOC -->
 
 # 1 Business understanding
 ## 1.1 Business background
@@ -124,7 +164,7 @@ The following is users&#39; basic information, mainly provided by dataset. The b
 | age\_8.0 | ordinal | 1 if the user is older than 50, 0 otherwise |
 | gender | nominal | 0 for female, 1 for male |
 
-**User behavior features:**
+**User behavior features**
 
 The following are features that correspond to clicking, adding to shop cart, purchasing, favoring and interacting. The data comes from the user\_log table. On one hand, we count the total number of clicking, adding to shop cart, purchasing, favoring and interacting. On the other hand, we calculate the ratio of user&#39;s specific behaviors to the total number of this specific behavior in order to obtain the performance of one specific user in the whole consumer group, given that the total number of users is 424170, total interaction number is 54925330, total click number is 48550713, total adding to shopping cart number is 76750, total purchasing number is 3292144, and total favoring number is 3005723. Also, we calculate the difference between user&#39;s certain behavior and the average number of a certain behavior for the same purpose, given that the average interactions of users are 129.4, the average clicks of users are 114.5, the average purchases of users are 7.8 and the average favors of users are 7.1.
 
